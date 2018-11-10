@@ -3,6 +3,9 @@ import Card from "./Card";
 import {robots} from './robots';
 
 const CardList = ({searchfield}) => {
+    if (true) {
+      throw new Error('Noooooo')
+    }
     let filtered = robots.reduce((acc, curr) => {
         if (curr.username.toLowerCase().includes(searchfield)) {
             acc.push(curr);
@@ -17,7 +20,7 @@ const CardList = ({searchfield}) => {
 
     return (
         <div>
-           {robofriends} 
+           {robofriends}
         </div>
     );
 }
